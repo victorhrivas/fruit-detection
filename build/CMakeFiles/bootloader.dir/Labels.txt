@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/CMakeFiles/bootloader
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/CMakeFiles/bootloader.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/CMakeFiles/bootloader-complete.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

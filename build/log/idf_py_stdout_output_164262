@@ -1,0 +1,168 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader/esp-idf/esptool_py && /home/flaco/esp/idf-tools/python_env/idf5.4_py3.10_env/bin/python /home/flaco/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/flaco/esp/Proyecto_Final/fruit_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x6f50 bytes. 0xb0 bytes (1%) free.
+[2/8] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/detection_responder.cc.obj
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc: In function 'void RespondToDetection(float*, const char**)':
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:91:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   91 |     lcd_send_string("probando ");
+      |                     ^~~~~~~~~~~
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:110:25: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  110 |         lcd_send_string("No fruit detected");
+      |                         ^~~~~~~~~~~~~~~~~~~
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:119:25: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  119 |         lcd_send_string("price: $1.990/Kg");
+      |                         ^~~~~~~~~~~~~~~~~~
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:122:25: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  122 |         lcd_send_string("price: $2.490/Kg");
+      |                         ^~~~~~~~~~~~~~~~~~
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:125:25: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  125 |         lcd_send_string("price: $1.590/Kg");
+      |                         ^~~~~~~~~~~~~~~~~~
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:127:23: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  127 |       lcd_send_string("Weight: 0.3 Kg");
+      |                       ^~~~~~~~~~~~~~~~
+/home/flaco/esp/Proyecto_Final/fruit_detection/main/detection_responder.cc:133:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  133 |     lcd_send_string("No fruit detected");
+      |                     ^~~~~~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable person_detection.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.8.dev3
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/flaco/esp/Proyecto_Final/fruit_detection/build/person_detection.bin
+[7/8] cd /home/flaco/esp/Proyecto_Final/fruit_detection/build/esp-idf/esptool_py && /home/flaco/esp/idf-tools/python_env/idf5.4_py3.10_env/bin/python /home/flaco/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/flaco/esp/Proyecto_Final/fruit_detection/build/partition_table/partition-table.bin /home/flaco/esp/Proyecto_Final/fruit_detection/build/person_detection.bin
+person_detection.bin binary size 0x1f6760 bytes. Smallest app partition is 0x300000 bytes. 0x1098a0 bytes (35%) free.
+[7/8] cd /home/flaco/esp/idf/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/flaco/esp/idf/esp-idf -D "SERIAL_TOOL=/home/flaco/esp/idf-tools/python_env/idf5.4_py3.10_env/bin/python;;/home/flaco/esp/idf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/flaco/esp/Proyecto_Final/fruit_detection/build -P /home/flaco/esp/idf/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev3
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WDQ6 (revision v1.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: b0:b2:1c:f8:3b:c8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00206fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 28496 bytes to 17357...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007a49... (100 %)
+Wrote 28496 bytes (17357 compressed) at 0x00001000 in 0.6 seconds (effective 401.8 kbit/s)...
+Hash of data verified.
+Compressed 2058080 bytes to 1560818...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001d44e... (2 %)
+Writing at 0x00021e12... (3 %)
+Writing at 0x0002642e... (4 %)
+Writing at 0x0002b5fd... (5 %)
+Writing at 0x00030503... (6 %)
+Writing at 0x00035540... (7 %)
+Writing at 0x0003a561... (8 %)
+Writing at 0x0003f5f5... (9 %)
+Writing at 0x000445ae... (10 %)
+Writing at 0x000494bc... (11 %)
+Writing at 0x0004e4a4... (12 %)
+Writing at 0x0005363a... (13 %)
+Writing at 0x0005881e... (14 %)
+Writing at 0x0005d77b... (15 %)
+Writing at 0x000628fe... (16 %)
+Writing at 0x00067a26... (17 %)
+Writing at 0x0006c92b... (18 %)
+Writing at 0x00071dad... (19 %)
+Writing at 0x000770ce... (20 %)
+Writing at 0x0007c233... (21 %)
+Writing at 0x0008142e... (22 %)
+Writing at 0x000863f4... (23 %)
+Writing at 0x0008b4c5... (25 %)
+Writing at 0x00090570... (26 %)
+Writing at 0x000955f3... (27 %)
+Writing at 0x0009a7a4... (28 %)
+Writing at 0x0009f8d6... (29 %)
+Writing at 0x000a4920... (30 %)
+Writing at 0x000a9a1b... (31 %)
+Writing at 0x000aed83... (32 %)
+Writing at 0x000b3bbf... (33 %)
+Writing at 0x000b8d51... (34 %)
+Writing at 0x000bdf68... (35 %)
+Writing at 0x000c3340... (36 %)
+Writing at 0x000c8515... (37 %)
+Writing at 0x000cd652... (38 %)
+Writing at 0x000d27a8... (39 %)
+Writing at 0x000d781a... (40 %)
+Writing at 0x000dc95c... (41 %)
+Writing at 0x000e185b... (42 %)
+Writing at 0x000e686c... (43 %)
+Writing at 0x000eb914... (44 %)
+Writing at 0x000f0a93... (45 %)
+Writing at 0x000f5abb... (46 %)
+Writing at 0x000faae4... (47 %)
+Writing at 0x000ffc0d... (48 %)
+Writing at 0x00104b51... (50 %)
+Writing at 0x00109d14... (51 %)
+Writing at 0x0010ed7a... (52 %)
+Writing at 0x00113e63... (53 %)
+Writing at 0x00119091... (54 %)
+Writing at 0x0011e2a9... (55 %)
+Writing at 0x00123297... (56 %)
+Writing at 0x001282d1... (57 %)
+Writing at 0x0012d3ac... (58 %)
+Writing at 0x001325df... (59 %)
+Writing at 0x00137770... (60 %)
+Writing at 0x0013ca21... (61 %)
+Writing at 0x00141b46... (62 %)
+Writing at 0x00146d1e... (63 %)
+Writing at 0x0014bfb6... (64 %)
+Writing at 0x001510bb... (65 %)
+Writing at 0x00155fe2... (66 %)
+Writing at 0x0015b010... (67 %)
+Writing at 0x001600fb... (68 %)
+Writing at 0x001650d9... (69 %)
+Writing at 0x0016a1b2... (70 %)
+Writing at 0x0016f464... (71 %)
+Writing at 0x00174895... (72 %)
+Writing at 0x00179893... (73 %)
+Writing at 0x0017eb98... (75 %)
+Writing at 0x00183df2... (76 %)
+Writing at 0x00188e12... (77 %)
+Writing at 0x0018e023... (78 %)
+Writing at 0x001932b3... (79 %)
+Writing at 0x0019839c... (80 %)
+Writing at 0x0019d57f... (81 %)
+Writing at 0x001a2786... (82 %)
+Writing at 0x001a793a... (83 %)
+Writing at 0x001ac8e4... (84 %)
+Writing at 0x001b19d9... (85 %)
+Writing at 0x001b6410... (86 %)
+Writing at 0x001baa0c... (87 %)
+Writing at 0x001c0ec1... (88 %)
+Writing at 0x001c91f8... (89 %)
+Writing at 0x001cead2... (90 %)
+Writing at 0x001d42a5... (91 %)
+Writing at 0x001d9ab2... (92 %)
+Writing at 0x001deb8b... (93 %)
+Writing at 0x001e3e6d... (94 %)
+Writing at 0x001ea41a... (95 %)
+Writing at 0x001f0611... (96 %)
+Writing at 0x001f6c58... (97 %)
+Writing at 0x001ff25d... (98 %)
+Writing at 0x00204d12... (100 %)
+Wrote 2058080 bytes (1560818 compressed) at 0x00010000 in 35.0 seconds (effective 470.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 1059.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
